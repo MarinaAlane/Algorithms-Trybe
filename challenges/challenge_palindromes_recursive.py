@@ -7,5 +7,4 @@ def is_palindrome_recursive(word, low_index, high_index):
         return False
     else:
         sliced_word = word[1:high_index]
-        return is_palindrome_recursive(sliced_word, 0, len(sliced_word) -1)
-
+        return is_palindrome_recursive(sliced_word, 0, len(sliced_word) - 1)

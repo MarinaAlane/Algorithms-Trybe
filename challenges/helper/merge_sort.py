@@ -5,6 +5,7 @@ def merge_sort(array):
     left, right = merge_sort(array[:mid]), merge_sort(array[mid:])
     return merge(left, right, array.copy())
 
+
 def merge(left, right, merged):
     left_cursor, right_cursor = 0, 0
     while left_cursor < len(left) and right_cursor < len(right):
