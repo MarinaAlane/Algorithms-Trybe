@@ -13,6 +13,3 @@ def find_duplicate(nums):
         return duplicate
     except Exception:
         return duplicate
-
-
-print(find_duplicate([-1, "a"]))
