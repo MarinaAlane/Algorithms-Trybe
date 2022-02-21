@@ -1,8 +1,7 @@
 def find_duplicate(nums):
     separator = ''
-    result = False
+    result = ''
     lista = sorted(nums)
-    print(lista)
     if len(nums) < 2:
         return False
     elif '-' in separator.join(str(nums) for e in nums):
