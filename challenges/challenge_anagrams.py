@@ -4,6 +4,7 @@ def is_anagram(first_string, second_string):
     second_list = list(second_string)
     return merge_sort(first_list) == merge_sort(second_list)
 
+
 def merge_sort(array):
     if len(array) <= 1:
         return array
