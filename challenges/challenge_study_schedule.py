@@ -1,6 +1,3 @@
-from multiprocessing.sharedctypes import Value
-
-
 def study_schedule(permanence_period, target_time):
     counter = 0
     try:
