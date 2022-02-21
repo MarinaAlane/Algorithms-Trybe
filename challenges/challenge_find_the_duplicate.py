@@ -1,2 +1,3 @@
+# recursivo
 def find_duplicate(nums):
-    """ Faça o código aqui. """
+    """Faça o código aqui."""
