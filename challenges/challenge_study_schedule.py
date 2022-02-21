@@ -9,7 +9,7 @@ def study_schedule(permanence_period, target_time):
                 counter += 1
             if schedule[0] < target_time < schedule[1]:
                 counter += 1
-        return counter if counter > 0 else None
+        return counter
     except TypeError:
         return None
 
