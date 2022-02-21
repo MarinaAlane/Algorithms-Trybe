@@ -4,11 +4,11 @@ def study_schedule(permanence_period, target_time):
 
     counter = 0
 
-    for period in permanence_period:
-        if type(period[0]) is not int or type(period[1]) is not int:
+    for begin, end in permanence_period:
+        if type(begin) is not int or type(end) is not int:
             return None
 
-        if period[0] <= target_time and period[1] >= target_time:
+        if begin <= target_time <= end:
             counter += 1
 
     return counter
