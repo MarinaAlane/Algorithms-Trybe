@@ -10,6 +10,3 @@ def find_duplicate(nums):
         if lista[index] == lista[index - 1]:
             result = number
     return result
-
-
-print(find_duplicate([1, 2, 3, 5, 4, 4]))
