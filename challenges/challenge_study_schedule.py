@@ -6,6 +6,7 @@ def check_study_schedule(permanence_period, target_time):
             return None
     return True        
 
+
 def better_time_schedule(permanence_period, target_time):
     count_target_time = 0
     result = 0
@@ -18,6 +19,7 @@ def better_time_schedule(permanence_period, target_time):
             result = count
         count_target_time = count_target_time + 1
     return result
+
 
 def study_schedule(permanence_period, target_time):
     if not check_study_schedule(permanence_period, target_time):
