@@ -2,9 +2,9 @@ def check_study_schedule(permanence_period, target_time):
     if type(target_time) != int:
         return None
     for tupla in permanence_period:
-        if type(tupla[0]) != int or type(tupla[1]) != int: 
+        if type(tupla[0]) != int or type(tupla[1]) != int:
             return None
-    return True        
+    return True
 
 
 def better_time_schedule(permanence_period, target_time):
