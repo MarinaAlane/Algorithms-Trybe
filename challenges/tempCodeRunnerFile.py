@@ -1,21 +1,15 @@
-def study_schedule(permanence_period, target_time):
-    result = 0
-
-    if not bool(target_time):
-        return None
-
-    for number in permanence_period:
-        if type(number[0]) != int or type(number[0]) != int:
-            return None
-        elif (
-            number[0] <= target_time <= number[1]
-            # target_time in range(number[0], number[1]) or target_time in number
-        ):
-            result += 1
-    return result
+def is_palindrome_recursive(word, low_index, high_index):
+    if len(word) == 0:
+        return False
+    if low_index >= high_index:
+        if word[low_index] == word[high_index]:
+            return True
+        else:
+            return False
+    if word[low_index] == word[high_index]:
+        return is_palindrome_recursive(word, low_index + 1, high_index - 1)
+    else:
+        return False
 
 
-permanence_period = [(2, 2), (1, 2), ('a', 3), (1, 5), (4, 5), (4, 5)]
-
-
-print(study_schedule(permanence_period, None))
+print(is_palindrome_recursive("laial", 0, -1))
