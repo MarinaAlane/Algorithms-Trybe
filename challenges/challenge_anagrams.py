@@ -1,21 +1,31 @@
-def merge(left, right, merged):
+import timeit
 
-    left_cursor, right_cursor = 0, 0
 
-    while left_cursor < len(left) and right_cursor < len(right):
+def merge(left, right, char_list):
 
-        if left[left_cursor] <= right[right_cursor]:
-            merged[left_cursor + right_cursor] = left[left_cursor]
-            left_cursor += 1
+    left_index, right_index = 0, 0
+    full_index = 0
+
+    while left_index < len(left) and right_index < len(right):
+        if left[left_index] <= right[right_index]:
+            char_list[full_index] = left[left_index]
+            left_index += 1
         else:
-            merged[left_cursor + right_cursor] = right[right_cursor]
-            right_cursor += 1
-    for left_cursor in range(left_cursor, len(left)):
-        merged[left_cursor + right_cursor] = left[left_cursor]
-    for right_cursor in range(right_cursor, len(right)):
-        merged[left_cursor + right_cursor] = right[right_cursor]
+            char_list[full_index] = right[right_index]
+            right_index += 1
+        full_index += 1
 
-    return ''.join(merged)
+    while left_index < len(left):
+        char_list[full_index] = left[left_index]
+        left_index += 1
+        full_index += 1
+
+    while right_index < len(right):
+        char_list[full_index] = right[right_index]
+        right_index += 1
+        full_index += 1
+
+    return char_list
 
 
 def merge_sort(string):
@@ -37,4 +47,10 @@ def is_anagram(first_string, second_string):
 
 
 if __name__ == '__main__':
-    print(is_anagram('amor', 'roma'))
+    setup_import = "from challenges.challenge_anagrams " "import is_anagram"
+    time = timeit.timeit(
+        'is_anagram("amora", "aroma")',
+        setup=f"{setup_import}",
+        number=1000,
+    )
+    print(time)
