@@ -1,5 +1,6 @@
 from challenges.merge_sort import merge_sort
 
+
 def is_anagram(first_string, second_string):
     first_array = list(first_string)
     second_array = list(second_string)
