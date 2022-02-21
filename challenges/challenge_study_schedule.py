@@ -25,5 +25,3 @@ def study_schedule(permanence_period, target_time):
     if not check_study_schedule(permanence_period, target_time):
         return None
     return better_time_schedule(permanence_period, target_time)
-
-print(study_schedule([(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)], 5))
