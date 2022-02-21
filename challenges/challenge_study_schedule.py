@@ -1,5 +1,3 @@
-
-
 def study_schedule(period, time):
     try:
         online_students = [
