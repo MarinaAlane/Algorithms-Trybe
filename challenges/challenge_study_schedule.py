@@ -6,11 +6,9 @@ def check_study_schedule(permanence_period, target_time):
             return None
     return True        
 
-def study_schedule(permanence_period, target_time):
+def better_time_schedule(permanence_period, target_time):
     count_target_time = 0
     result = 0
-    if not check_study_schedule(permanence_period, target_time):
-        return None    
     while target_time >= count_target_time:
         count = 0
         for tupla in permanence_period:
@@ -20,5 +18,10 @@ def study_schedule(permanence_period, target_time):
             result = count
         count_target_time = count_target_time + 1
     return result
+
+def study_schedule(permanence_period, target_time):
+    if not check_study_schedule(permanence_period, target_time):
+        return None
+    return better_time_schedule(permanence_period, target_time)
 
 print(study_schedule([(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)], 5))
