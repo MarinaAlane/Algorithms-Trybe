@@ -1,19 +1,15 @@
-def order_letters(word):
-    lista = list(word)
-    swapped = True
-    iterations = 0
+def find_duplicate(nums):
     separator = ''
+    result = False
+    lista = sorted(nums)
+    print(lista)
+    if len(nums) < 2:
+        return False
+    elif '-' in separator.join(str(nums) for e in nums):
+        return False
+    if lista[0] == lista[1]:
+        result = lista[0]
+    return result
 
-    while swapped:
-        swapped = False
 
-        for letter in range(len(lista) - iterations - 1):
-            if lista[letter] > lista[letter + 1]:
-                lista[letter], lista[letter + 1] = lista[letter + 1], lista[letter]
-
-                swapped = True
-        iterations += 1
-    return separator.join(lista)
-
-
-print(order_letters('bola'))
+print(find_duplicate([1, 2, 3, 2, 4]))
