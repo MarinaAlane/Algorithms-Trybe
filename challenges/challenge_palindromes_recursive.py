@@ -8,7 +8,7 @@ def is_palindrome_recursive(word, low_index, high_index):
         return is_palindrome_recursive(word, low_index + 1, high_index - 1)
     else:
         return False
-    
+
 
 if __name__ == '__main__':
     word = 'AGUA'
