@@ -1,10 +1,10 @@
 def study_schedule(permanence_period, target_time):
-    """ Faça o código aqui. """
+    if type(target_time) is not int:
+        return None
     counter = 0
-    for item in permanence_period:
-        if (type(target_time) is not int or
-                type(item[0]) is not int or type(item[1]) is not int):
+    for entrada, saida in permanence_period:
+        if type(entrada) is not int or type(saida) is not int:
             return None
-        if item[0] <= target_time and item[1] >= target_time:
+        if entrada <= target_time <= saida:
             counter += 1
     return counter
