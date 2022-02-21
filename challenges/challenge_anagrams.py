@@ -1,5 +1,6 @@
 def is_anagram(first_string, second_string):
-    first_string_list, second_string_list = list(first_string), list(second_string)
+    first_string_list = list(first_string)
+    second_string_list = list(second_string)
     return merge_sort(first_string_list) == merge_sort(second_string_list)
 
 
