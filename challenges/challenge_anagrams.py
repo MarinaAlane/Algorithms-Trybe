@@ -1,3 +1,4 @@
+# Teste de solução 1: Não passou na questão do tempo
 # def order_letters(word):
 #     lista = list(word)
 #     swapped = True
@@ -22,6 +23,7 @@
 # def is_anagram(first_string, second_string):
 #     return order_letters(first_string) == order_letters(second_string)
 
+# Teste de solução 2: passou na questão do tempo
 
 def merge_sort(word):
     array = list(word)
