@@ -30,6 +30,7 @@ def study_schedule(permanence_period, target_time):
 #     print(study_schedule(tupla_period, 3))
 #     print(study_schedule(tupla_period, 4))
 #     print(study_schedule(tupla_period, 5))
+
 # Algoritmos de força bruta:
 # https://www.freecodecamp.org/portuguese/news/algoritmos-de-forca-bruta-explicados/
 # https://www.math.tecnico.ulisboa.pt/~ccal/python/nb06.html
