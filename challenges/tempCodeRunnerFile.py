@@ -1,15 +1,19 @@
-def is_palindrome_recursive(word, low_index, high_index):
-    if len(word) == 0:
-        return False
-    if low_index >= high_index:
-        if word[low_index] == word[high_index]:
-            return True
-        else:
-            return False
-    if word[low_index] == word[high_index]:
-        return is_palindrome_recursive(word, low_index + 1, high_index - 1)
-    else:
-        return False
+def order_letters(word):
+    lista = list(word)
+    swapped = True
+    iterations = 0
+    separator = ''
+
+    while swapped:
+        swapped = False
+
+        for letter in range(len(lista) - iterations - 1):
+            if lista[letter] > lista[letter + 1]:
+                lista[letter], lista[letter + 1] = lista[letter + 1], lista[letter]
+
+                swapped = True
+        iterations += 1
+    return separator.join(lista)
 
 
-print(is_palindrome_recursive("laial", 0, -1))
+print(order_letters('bola'))
