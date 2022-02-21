@@ -8,4 +8,3 @@ def study_schedule(permanence_period, target_time):
         if first_time <= target_time <= last_time:
             counter += 1
     return counter
-
