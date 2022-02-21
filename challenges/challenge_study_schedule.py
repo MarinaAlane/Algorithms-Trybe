@@ -17,13 +17,13 @@ def study_schedule(permanence_period, target_time):
     return student
 
 
-# if __name__ == "__main__":
-#     tupla_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
-#     print(study_schedule(tupla_period, 1))
-#     print(study_schedule(tupla_period, 2))
-#     print(study_schedule(tupla_period, 3))
-#     print(study_schedule(tupla_period, 4))
-#     print(study_schedule(tupla_period, 5))
+if __name__ == "__main__":
+    permanence_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
+    print(study_schedule(permanence_period, 1))
+    print(study_schedule(permanence_period, 2))
+    print(study_schedule(permanence_period, 3))
+    print(study_schedule(permanence_period, 4))
+    print(study_schedule(permanence_period, 5))
 
 # Algoritmos de força bruta:
 # https://www.freecodecamp.org/portuguese/news/algoritmos-de-forca-bruta-explicados/
