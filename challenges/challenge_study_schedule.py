@@ -11,5 +11,5 @@ def study_schedule(permanence_period, target_time):
 
         if permanence_zero <= target_time <= permanence_one:
             count_study += 1
-    
+
     return count_study
