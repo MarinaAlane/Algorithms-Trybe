@@ -1,5 +1,5 @@
 # https://panda.ime.usp.br/panda/static/pythonds_pt/02-AnaliseDeAlgoritmos/ExemploDeDeteccaoDeAnagramas.html
-def solucaoAnagrama(s1,s2):
+def solucaoAnagrama(s1, s2):
     c1 = [0]*26
     c2 = [0]*26
 
@@ -13,18 +13,14 @@ def solucaoAnagrama(s1,s2):
 
     j = 0
     aindaOK = True
-    while j<26 and aindaOK:
-        if c1[j]==c2[j]:
+    while j < 26 and aindaOK:
+        if c1[j] == c2[j]:
             j = j + 1
         else:
             aindaOK = False
 
     return aindaOK
 
+
 def is_anagram(first_string, second_string):
-    if(solucaoAnagrama(first_string, second_string)):
-        return True
-    else:
-        return False
-
-
+    return (solucaoAnagrama(first_string, second_string))
