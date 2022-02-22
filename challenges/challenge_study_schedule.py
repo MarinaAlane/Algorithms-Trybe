@@ -5,8 +5,8 @@ def study_schedule(permanence_period, target_time):
     """
     if not target_time:
         return None
-    
     return toocomplex(permanence_period, target_time)
+
 
 # https://www.flake8rules.com/rules/C901.html
 def toocomplex(permanence_period, target_time):
