@@ -1,6 +1,10 @@
 def is_anagram(first_string, second_string):
     if len(first_string) != len(second_string):
         return False
+    validate_anagram(first_string, second_string)
+
+
+def validate_anagram(first_string, second_string):
     first_list = list(first_string)
     second_list = list(second_string)
     first_count = 0
