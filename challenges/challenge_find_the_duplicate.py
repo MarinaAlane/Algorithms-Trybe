@@ -2,15 +2,12 @@ def find_duplicate(nums):
     """ Faça o código aqui. """
     nums.sort()
     duplicate = ''
-    if len(nums) == 1:
-        return False
-    for index, number in enumerate(nums):
-        if (type(number) is not int) or (number < 0):
+    for index, num in enumerate(nums):
+        if (type(num) is not int) or (num < 0) or (index == len(nums) - 1):
             return False
-        elif index < len(nums) - 1:
-            if nums[index] == nums[index + 1]:
-                duplicate = number
-                break
-            else:
-                duplicate = False
+        elif nums[index] == nums[index + 1]:
+            duplicate = num
+            break
+        else:
+            duplicate = False
     return duplicate
