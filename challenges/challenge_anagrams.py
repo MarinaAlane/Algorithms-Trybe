@@ -6,7 +6,7 @@ def character_count(string):
         else:
             string_dict[char] = 0
     return string_dict
-    
+
 
 def is_anagram(first_string, second_string):
     first_string_dict = character_count(first_string)
@@ -19,4 +19,3 @@ def is_anagram(first_string, second_string):
         if first_string_dict[key] != second_string_dict[key]:
             return False
     return True
-  
