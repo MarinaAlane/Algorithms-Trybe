@@ -10,10 +10,11 @@ def aux(first_string, second_string):
                 break
     return second_string
 
+
 def is_anagram(first_string, second_string):
     """ Faça o código aqui. """
     if len(first_string) == len(second_string) == 0:
-        return False    
+        return False
     if len(first_string) != len(second_string):
         return False
     # first_string = list(first_string)
