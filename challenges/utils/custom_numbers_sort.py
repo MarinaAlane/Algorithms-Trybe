@@ -10,7 +10,7 @@ def validations(numbers):
 
 
 def custom_numbers_sort(numbers):
-    if validations(numbers) is False:
+    if not validations(numbers):
         return False
     if len(numbers) <= 1:
         return numbers

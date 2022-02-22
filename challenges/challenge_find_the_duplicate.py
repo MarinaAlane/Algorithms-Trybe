@@ -2,7 +2,7 @@ from challenges.utils.custom_numbers_sort import custom_numbers_sort
 
 
 def validations(sorted_list):
-    if sorted_list is False:
+    if not sorted_list:
         return False
     if sorted_list[0] == sorted_list[1]:
         return sorted_list[0]
