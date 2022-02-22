@@ -1,7 +1,4 @@
 def study_schedule(permanence_period, target_time):
-    """ Faça o código aqui. """
-    if not target_time:
-        return None
     result = 0
     for enter, exit in permanence_period:
         try:
