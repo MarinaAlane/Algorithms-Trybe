@@ -1,7 +1,7 @@
 def sort(string):
     if len(string) <= 1:
         return string
-    
+
     s_list = list(string)
     mid = len(s_list)//2
 
