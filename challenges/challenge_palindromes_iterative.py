@@ -1,11 +1,8 @@
-from math import ceil
-
-
 def is_palindrome_iterative(word):
     if word == '':
         return False
 
-    max_iterator = ceil(len(word) / 2)
+    max_iterator = len(word) // 2
     max_index = len(word) - 1
 
     for i in range(max_iterator):
