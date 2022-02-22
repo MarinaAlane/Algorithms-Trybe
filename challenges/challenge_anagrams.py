@@ -29,15 +29,7 @@ def merge(left, right, merged):
 
 
 def is_anagram(first_string, second_string):
-    if first_string == '' or second_string == '':
-        return False
-
-    if len(first_string) != len(second_string):
-        return False
-
     string_list1 = list(first_string)
     string_list2 = list(second_string)
-    str_list1 = merge_sort(string_list1)
-    str_list2 = merge_sort(string_list2)
 
-    return str_list1 == str_list2
+    return merge_sort(string_list1) == merge_sort(string_list2)
