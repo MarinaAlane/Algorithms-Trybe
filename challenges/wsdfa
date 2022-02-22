@@ -6,10 +6,6 @@ def is_anagram(first_string, second_string):
     else:
         return True
 
-# Basicamente ele vai comparando a primeira letra da second_string
-# com todas as letras do first_string caso ele encontre ele passa pra segunda
-# letra e assim vai, se não encontrar alguma das letras ele retorna falso
-
 
 def validate_anagram(first_string, second_string):
     first_list = list(first_string)
