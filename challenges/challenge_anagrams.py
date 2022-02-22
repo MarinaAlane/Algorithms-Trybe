@@ -30,8 +30,8 @@ def is_anagram(first_string, second_string):
         return False
     elif len(first_string) != len(second_string):
         return False
-    first_str_ordered = ''.join(merge_sort(list(first_string)))
-    second_str_ordered = ''.join(merge_sort(list(second_string)))
+    first_str_ordered = merge_sort(list(first_string))
+    second_str_ordered = merge_sort(list(second_string))
 
     if first_str_ordered == second_str_ordered:
         return True
