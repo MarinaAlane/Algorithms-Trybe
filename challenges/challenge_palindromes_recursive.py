@@ -8,6 +8,6 @@ def is_palindrome_recursive(word, low_index, high_index):
     # base case: check if word length is smaller or equals two?
     # check if word low index === word high index
     # if true for both, return true
-    # if true only for second, cut the words low and high index and call func again
+    # if true only for second, cut the words low and high i
 
     """ Faça o código aqui. """
