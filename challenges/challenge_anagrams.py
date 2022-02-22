@@ -24,7 +24,7 @@ def merge_sort(arr):
 def merge(arr1, arr2):
     merged = []
 
-    while arr1 and arr2:
+    while arr1 or arr2:
         if not arr1:
             merged.extend(arr2)
             break

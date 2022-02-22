@@ -5,6 +5,7 @@ def find_duplicate(nums):
     try:
         validate_input(nums)
         sorted = merge_sort(nums)
+        print(sorted)
         for i in range(1, len(sorted)):
             current = sorted[i]
             previous = sorted[i - 1]
