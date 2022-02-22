@@ -1,13 +1,12 @@
 def is_palindrome_recursive(word, low_index, high_index):
-    if len(word) <= 2:
+    if word == '':
+        return False
+    elif len(word) == 1:
         return True
+    elif len(word) <= 2 and word[low_index] == word[high_index]:
+        return True
+    elif len(word) <= 2 and word[low_index] != word[high_index]:
+        return False
     else:
-        if word[low_index] == word[high_index]:
-            n_arr = word[low_index+1:high_index-1]
-            is_palindrome_recursive(n_arr, low_index, len(n_arr))
-    # base case: check if word length is smaller or equals two?
-    # check if word low index === word high index
-    # if true for both, return true
-    # if true only for second, cut the words low and high i
-
-    """ Faça o código aqui. """
+        wrd = word[low_index+1:len(word)-1]
+        return is_palindrome_recursive(wrd, low_index, len(wrd)-1)
