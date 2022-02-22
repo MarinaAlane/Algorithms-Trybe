@@ -1,3 +1,5 @@
+# ..Source: https://www.geeksforgeeks.org/python-check-if-a-variable-is-string
+
 def validations(numbers):
     for number in numbers:
         if isinstance(number, str):
