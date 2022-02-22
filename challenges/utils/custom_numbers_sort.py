@@ -2,9 +2,7 @@
 
 def validations(numbers):
     for number in numbers:
-        if isinstance(number, str):
-            return False
-        elif number < 1:
+        if isinstance(number, str) or number < 1:
             return False
     return True
 
