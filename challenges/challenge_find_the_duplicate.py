@@ -1,5 +1,5 @@
 def find_duplicate(nums):
-    if nums == '' or len(nums) == 0 or isinstance(nums,str):
+    if nums == '' or len(nums) == 0 or isinstance(nums, str):
         return False
     else:
         found = set()
