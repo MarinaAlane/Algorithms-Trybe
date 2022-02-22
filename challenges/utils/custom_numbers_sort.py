@@ -1,19 +1,22 @@
-def custom_numbers_sort(numbers):
-    if len(numbers) <= 1:
-        return numbers
-    base_number = numbers[len(numbers) // 2]
-    middle = []
-    left = []
-    right = []
+def validations(numbers):
     for number in numbers:
         if isinstance(number, str):
             return False
-        if number < 1:
+        elif number < 1:
             return False
-        if number > base_number:
-            right.append(number)
-        elif number < base_number:
-            left.append(number)
-        else:
-            middle.append(number)
+    return True
+
+
+def custom_numbers_sort(numbers):
+    if validations(numbers) is False:
+        return False
+    if len(numbers) <= 1:
+        return numbers
+
+    base_number = numbers[len(numbers) // 2]
+
+    middle = [number for number in numbers if number == base_number]
+    left = [number for number in numbers if number < base_number]
+    right = [number for number in numbers if number > base_number]
+
     return custom_numbers_sort(left) + middle + custom_numbers_sort(right)
