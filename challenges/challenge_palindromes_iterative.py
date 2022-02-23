@@ -3,5 +3,5 @@ def is_palindrome_iterative(word):
         return False
     check_palindrome = "".join(char.lower() for char in word if char.isalnum())
     return check_palindrome == check_palindrome[::-1]
-# Code based in this article:
+# Code based on this article:
 # https://www.pythonlikeyoumeanit.com/Module2_EssentialsOfPython/Problems/Palindrome.html
