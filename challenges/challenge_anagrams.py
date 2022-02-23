@@ -1,10 +1,10 @@
-def is_anagram(first_string, second_string):
-    if valid_anagram(split(first_string)) == valid_anagram(split(second_string)):
+def is_anagram(f_string, s_string):
+    if valid_anagram(split(f_string)) == valid_anagram(split(s_string)):
         return True
     else:
         return False
+    """Miguel campos me ajudou na complexidade dessa questão"""
 
-"""Miguel campos me ajudou na complexidade dessa questão"""
 
 def split(word):
     return [char for char in word]
@@ -26,7 +26,3 @@ def valid_anagram(sequence):
             items_lower.append(item)
 
     return valid_anagram(items_lower) + [pivot] + valid_anagram(items_greater)
-
-
-def split(word):
-    return [char for char in word]
