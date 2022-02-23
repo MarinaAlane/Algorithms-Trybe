@@ -2,17 +2,14 @@
 def merge_sort(array):
     if len(array) <= 1:
         return array
-    # divide pela metade
-    mid_array = len(array) // 2
-
-    left_array, rigth_array = merge_sort(array[:mid_array]), merge_sort(
-        array[mid_array:]
-    )
-    return merge(left_array, rigth_array, array[:])
+    mid = len(array) // 2
+    left_array = merge_sort(array[:mid])
+    rigth_array = merge_sort(array[mid:])
+    return merge(array, left_array, rigth_array)
 
 
 # função auxiliar - mistura dos arrays (codigo do course)
-def merge(left_array, rigth_array, merged):
+def merge(merged, left_array, rigth_array):
     left_cursor, right_cursor = 0, 0
 
     while left_cursor < len(left_array) and right_cursor < len(rigth_array):
@@ -32,10 +29,13 @@ def merge(left_array, rigth_array, merged):
     return merged
 
 
+# Retirado o 'join'
+# Dica passada pela Mauricio Ieiri (sala c): não precisa usar o join, pois o
+# python qdo compara dois arrays verifica-se pelos indices
+# sem a necessidade desse join
 def is_anagram(first_string, second_string):
-    # junta as palavras que vem na lista
-    first_word = "".join(merge_sort(list(first_string)))
-    second_word = "".join(merge_sort(list(second_string)))
+    first_word = merge_sort(list(first_string))
+    second_word = merge_sort(list(second_string))
     if not first_word or not second_word or first_word != second_word:
         return False
     return True
@@ -50,4 +50,3 @@ if __name__ == "__main__":
 # https://app.betrybe.com/course/computer-science/algoritmos/algoritmos-de-ordenacao-e-busca/29521083-44ea-488d-a74d-216b1ac79b04/conteudos/60672880-f607-40d3-92fc-e551b740a91f/algoritmos-de-ordenacao/fd503999-673b-443d-afb1-ffcc5d1718f4?use_case=side_bar
 # Video sobre merge sort: https://www.youtube.com/watch?v=5prE6Mz8Vh0
 # https://stackoverflow.com/questions/2597119/sorting-elements-in-string-with-python
-# https://www.geeksforgeeks.org/python-string-join-method/
