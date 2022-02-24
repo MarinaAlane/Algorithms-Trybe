@@ -1,7 +1,7 @@
 def is_anagram(first_string, second_string):
     if first_string == '' or second_string == '':
         return False
-    
+
     first = sort(list(first_string))
     second = sort(list(second_string))
 
@@ -10,6 +10,7 @@ def is_anagram(first_string, second_string):
     return False
 
 def sort(word):
+    # Peguei uma ajuda do course rsrs
     if len(word) <= 1:
         return word
 
@@ -40,5 +41,3 @@ def merge(left, right, merged):
         merged[left_pst + right_pst] = right[right_pst]
 
     return merged
-
-# Peguei uma ajuda do course rsrs
