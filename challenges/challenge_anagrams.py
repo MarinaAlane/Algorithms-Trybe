@@ -41,5 +41,4 @@ def merge(left, right, merged):
 
     for right_pst in range(right_pst, len(right)):
         merged[left_pst + right_pst] = right[right_pst]
-
     return merged
