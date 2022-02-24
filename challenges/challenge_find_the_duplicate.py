@@ -5,7 +5,7 @@ def is_valid_list(list):
 
 
 def is_valid_number(number):
-    return False if isinstance(number, str) or number < 0 else True
+    return not (isinstance(number, str) or number < 0)
 
 
 def find_duplicate(nums):
