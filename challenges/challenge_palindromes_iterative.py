@@ -5,7 +5,7 @@ def is_palindrome_iterative(word):
     counter = 0
     result = True
 
-    while counter <= (len(word) // 2) - 1:
+    while result and counter <= (len(word) // 2) - 1:
         result = word[counter] == word[-counter - 1]
         counter += 1
 
