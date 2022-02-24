@@ -2,10 +2,7 @@ def get_char_schema(string):
     schema = dict()
 
     for char in string:
-        try:
-            schema[char] += 1
-        except KeyError:
-            schema[char] = 1
+        schema[char] = schema.get(char, 0) + 1
 
     return schema
 
