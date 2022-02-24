@@ -7,8 +7,8 @@ def comparation(word, low_index, high_index):
 
 def is_palindrome_recursive(word, low_index, high_index):
     try:
-        if (low_index - high_index) < 2: 
+        if (low_index - high_index) < 2:
             return comparation(word, low_index, high_index)
-        return True      
+        return True
     except IndexError:
         return False
