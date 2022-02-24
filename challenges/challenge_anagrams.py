@@ -30,6 +30,3 @@ def is_anagram(first_string, second_string):
     f_array = merge_sort(list(first_string))
     s_array = merge_sort(list(second_string))
     return f_array == s_array
-
-
-print(is_anagram('asd', 'jhb'))
