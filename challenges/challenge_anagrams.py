@@ -1,4 +1,5 @@
 def is_anagram(first_string, second_string):
+    # https://www.javatpoint.com/python-dict-function
     firstWorldDictionary = dict()
     secondWorldDictionary = dict()
 
