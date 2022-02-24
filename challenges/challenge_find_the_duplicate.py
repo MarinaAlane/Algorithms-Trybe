@@ -5,10 +5,7 @@ def get_schema(list):
         if type(item) is not int or item < 0:
             return False
 
-        try:
-            schema[item] += 1
-        except KeyError:
-            schema[item] = 1
+        schema[item] = schema.get(item, 0) + 1
 
     return schema
 
