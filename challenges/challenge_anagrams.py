@@ -9,6 +9,7 @@ def is_anagram(first_string, second_string):
         return True
     return False
 
+
 def sort(word):
     # Peguei uma ajuda do course rsrs
     if len(word) <= 1:
@@ -20,6 +21,7 @@ def sort(word):
     right = sort(word[mid:])
 
     return merge(left, right, word.copy())
+
 
 def merge(left, right, merged):
 
