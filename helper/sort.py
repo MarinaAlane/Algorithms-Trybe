@@ -7,4 +7,4 @@ def sort(word):
         array_sorted.append(small)
         array.pop(array.index(small))
 
-    return "".join(array)
+    return "".join(array_sorted)
