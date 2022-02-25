@@ -3,11 +3,10 @@ def helper(first_string, second_string):
     sec_dict = dict()
 
     for i in range(len(first_string)):
-        if  first_string[i] in first_dict:
+        if first_string[i] in first_dict:
             first_dict[first_string[i]] += 1
         else:
             first_dict[first_string[i]] = 1
-
         if second_string[i] in sec_dict:
             sec_dict[second_string[i]] += 1
         else:
@@ -18,6 +17,7 @@ def helper(first_string, second_string):
     resp["sec_dict"] = sec_dict
 
     return resp
+
 
 def is_anagram(first_string, second_string):
     if len(first_string) != len(second_string):
