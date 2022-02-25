@@ -16,7 +16,8 @@ def selection_sort(strings):
                 minimum = j
 
         # após encontrar o menor valor
-        # ao invés de criar um novo array (o que aumenta complexidade de espaço)
+        # ao invés de criar um novo array
+        # (o que aumenta complexidade de espaço)
         # realizamos a substituição entre o menor elemento
         # e a posição i que corresponde ao primeiro elemento não ordenado
         # que consequentemente passará a ser o último ordenado
