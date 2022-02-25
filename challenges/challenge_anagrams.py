@@ -24,3 +24,4 @@ def is_anagram(first_string, second_string):
     return False
     """ Faça o código aqui. """
 # https://www.afternerd.com/blog/python-string-contains/
+# https://stackoverflow.com/questions/113655/is-there-a-function-in-python-to-split-a-word-into-a-list
