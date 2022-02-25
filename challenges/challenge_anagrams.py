@@ -1,7 +1,4 @@
-def is_anagram(first_string, second_string):
-    if len(first_string) != len(second_string):
-        return False
-
+def helper(first_string, second_string):
     first_dict = dict()
     sec_dict = dict()
 
@@ -15,6 +12,20 @@ def is_anagram(first_string, second_string):
             sec_dict[second_string[i]] += 1
         else:
             sec_dict[second_string[i]] = 1
+
+    resp = dict()
+    resp["first_dict"] = first_dict
+    resp["sec_dict"] = sec_dict
+
+    return resp
+
+def is_anagram(first_string, second_string):
+    if len(first_string) != len(second_string):
+        return False
+
+    dicts = helper(first_string, second_string)
+    first_dict = dicts["first_dict"]
+    sec_dict = dicts["sec_dict"]
 
     for i in range(len(first_string)):
         if first_string[i] not in sec_dict:
