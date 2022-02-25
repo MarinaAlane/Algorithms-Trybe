@@ -1,10 +1,10 @@
 # ref: https://app.betrybe.com/course/computer-science/algoritmos/algoritmos-de-ordenacao-e-busca/29521083-44ea-488d-a74d-216b1ac79b04/conteudos/60672880-f607-40d3-92fc-e551b740a91f/algoritmos-de-ordenacao/fd503999-673b-443d-afb1-ffcc5d1718f4?use_case=side_bar
 
 # Ordenação por Seleção (Selection Sort)
-def selection_sort(word):
+def selection_sort(string):
     # como um algoritmo de força bruta
     # percorre a estrutura exaustivamente
-    array = list(word)
+    array = list(string)
     for i in range(len(array)):
         minimum = i
 
@@ -28,10 +28,7 @@ print(selection_sort('carro'))
 
 
 def is_anagram(first_string, second_string):
-    string1 = selection_sort(first_string)
-    string2 = selection_sort(second_string)
-
-    if string1 == string2:
+    if selection_sort(first_string) == selection_sort(second_string):
         return True
     else:
         return False
