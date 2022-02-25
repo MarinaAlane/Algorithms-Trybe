@@ -1,4 +1,4 @@
-def find_duplicate(nums):
+def validate_nums(nums):
     if len(nums) < 2:
         return False
 
@@ -6,14 +6,18 @@ def find_duplicate(nums):
         if isinstance(item, str) or item < 0:
             return False
 
+    return True
+
+
+def find_duplicate(nums):
+    if not validate_nums(nums):
+        return False
+
     nums.sort()
 
     if not len(set(nums)) == len(nums):
-        for number1 in list(set(nums)):
-            count = 0
-            for number2 in nums:
-                if number1 == number2:
-                    count += 1
-                    if count > 1:
-                        return number1
+        for index in range(len(nums)):
+            if nums[index] == nums[index + 1]:
+                return nums[index]
+
     return False
