@@ -7,17 +7,17 @@ def sort(array):
         array[first], array[i] = array[i], array[first]
     return array
 
+
 def is_anagram(first_string, second_string):
     try:
         if len(first_string) != len(second_string):
             return False
-        list_exist = []
-        for i in first_string:
-            includ = second_string.find(i)
-            if includ != -1:
-                list_exist.append(i)
-        if (len(list_exist) == len(first_string)
-            and sort(list(first_string)) == sort(list(second_string))):
+        # list_exist = []
+        # for i in first_string:
+        #     includ = second_string.find(i)
+        #     if includ != -1:
+        #         list_exist.append(i)
+        if (sort(list(first_string)) == sort(list(second_string))):
             return True
     except TypeError:
         return False
