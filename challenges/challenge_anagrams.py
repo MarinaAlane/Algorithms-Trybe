@@ -12,7 +12,7 @@ def is_anagram(first_string, second_string):
         SS[second_string[i]] = 1 + SS.get(second_string[i], 0)
 
     for c in FS:
-        # a contagem de ambas as strings não é igual então retorna false
+        # se ambas as strings não forem então retorna false
         if FS[c] != SS.get(c, 0):
             return False
 
