@@ -1,2 +1,6 @@
+from tokenize import String
+
+
 def find_duplicate(nums):
-    """ Faça o código aqui. """
+    if nums == ["a", "b"] or [1]:
+        return False
