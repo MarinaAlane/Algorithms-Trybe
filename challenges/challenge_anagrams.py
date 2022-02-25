@@ -7,7 +7,7 @@ def is_anagram(first_string, second_string):
     FS, SS = {}, {}
 
     for i in range(len(first_string)):  # iterando através de qualquer string
-        # A função get ajudará a lidar com o erro de chave passando o valor padrão como 0
+        # A função get ajudará a lidar com o erro de chave default 0
         FS[first_string[i]] = 1 + FS.get(first_string[i], 0)
         SS[second_string[i]] = 1 + SS.get(second_string[i], 0)
 
