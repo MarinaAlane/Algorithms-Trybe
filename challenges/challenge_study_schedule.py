@@ -1,6 +1,4 @@
 def study_schedule(permanence_period, target_time):
-    if not target_time:
-        return None
     count = 0
     try:
         for start_time, end_time in permanence_period:
