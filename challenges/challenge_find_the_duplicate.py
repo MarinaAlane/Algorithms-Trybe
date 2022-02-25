@@ -14,8 +14,8 @@ def validations(list):
     if len(list) <= 2 and list[0] != list[1]:
         return True
 
-    for index in list:
-        if type(index) == str:
+    for element in list:
+        if type(element) == str:
             return True
-        if index < 1:
+        if element < 1:
             return True
