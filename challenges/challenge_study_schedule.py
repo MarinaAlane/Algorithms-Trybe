@@ -1,2 +1,10 @@
 def study_schedule(permanence_period, target_time):
-    """ Faça o código aqui. """
+    try:
+        student = 0
+        for start, stop in permanence_period:
+            if start <= target_time <= stop:
+                student += 1
+
+        return student
+    except:
+        return None
