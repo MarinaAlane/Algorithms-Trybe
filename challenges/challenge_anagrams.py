@@ -1,4 +1,7 @@
-def is_anagram(first_string, second_string):
+from operator import truediv
+
+
+def check_anagram(first_string, second_string):
     """ Faça o código aqui. """
     anagram = dict()
     if len(first_string) != len(second_string):
@@ -20,3 +23,10 @@ def is_anagram(first_string, second_string):
             return False
 
     return True
+
+
+def is_anagram(first_string, second_string):
+    if check_anagram(first_string, second_string):
+        return True
+    else:
+        return False
