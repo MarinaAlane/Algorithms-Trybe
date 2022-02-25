@@ -1,3 +1,4 @@
+# https://www.youtube.com/watch?v=92UyahoAne4
 def is_palindrome_recursive(word, low_index, high_index):
     # base case
     if not word:
