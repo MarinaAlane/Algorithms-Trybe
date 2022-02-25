@@ -1,16 +1,27 @@
-#  https://app.betrybe.com/course/computer-science/algoritmos/algoritmos-de-ordenacao-e-busca/29521083-44ea-488d-a74d-216b1ac79b04/conteudos/60672880-f607-40d3-92fc-e551b740a91f/algoritmos-de-ordenacao/fd503999-673b-443d-afb1-ffcc5d1718f4?use_case=side_bar
+# ref:
+# https://app.betrybe.com/course/computer-science/algoritmos/algoritmos-de-ordenacao-e-busca/29521083-44ea-488d-a74d-216b1ac79b04/conteudos/60672880-f607-40d3-92fc-e551b740a91f/algoritmos-de-ordenacao/fd503999-673b-443d-afb1-ffcc5d1718f4?use_case=side_bar
 
 # Ordenação por Seleção (Selection Sort)
-def selection_sort(strings):
-    array = list(strings)
+def selection_sort(string):
+    # como um algoritmo de força bruta
+    # percorre a estrutura exaustivamente
+    array = list(string)
     for i in range(len(array)):
         minimum = i
 
-    for j in range(i + 1, len(array)):
-        if array[j] < array[minimum]:
-            minimum = j
+        # itera sobre os elementos não ordenados
+        for j in range(i + 1, len(array)):
+            # seleciona o menor valor
+            if array[j] < array[minimum]:
+                minimum = j
 
-    array[minimum], array[i] = array[i], array[minimum]
+        # após encontrar o menor valor
+        # ao invés de criar um novo array
+        #  (o que aumenta complexidade de espaço)
+        # realizamos a substituição entre o menor elemento
+        # e a posição i que corresponde ao primeiro elemento não ordenado
+        # que consequentemente passará a ser o último ordenado
+        array[minimum], array[i] = array[i], array[minimum]
 
     return array
 
