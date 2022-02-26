@@ -4,6 +4,6 @@ def find_duplicate(nums):
             return False
         if nums[i] < 0:
             return False
-        if nums[i] in nums[i + 1 :]:
+        if nums[i] in nums[i + 1:]:
             return nums[i]
     return False
