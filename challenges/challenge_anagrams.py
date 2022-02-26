@@ -4,13 +4,18 @@
 # 40d3-92fc-e551b740a91f/algoritmos-de-ordenacao/
 # fd503999-673b-443d-afb1-ffcc5d1718f4?use_case=side_bar
 def string_to_list(string):
-    new_list = list(string)
-    for i in range(len(new_list)):
-        min = i
-        for j in range(i + 1, len(new_list)):
-            if new_list[j] < new_list[min]:
-                min = j
-        new_list[min], new_list[i] = new_list[i], new_list[min]
+    data_list = list(string)
+    new_list = list()
+    for i in range(len(data_list)):
+        minimum = min(data_list)
+        new_list.append(minimum)
+        data_list.remove(minimum)
+    # for i in range(len(new_list)):
+    #     min = i
+    #     for j in range(i + 1, len(new_list)):
+    #         if new_list[j] < new_list[min]:
+    #             min = j
+    #     new_list[min], new_list[i] = new_list[i], new_list[min]
     return new_list
 
 
