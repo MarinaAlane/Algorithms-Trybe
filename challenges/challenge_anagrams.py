@@ -9,11 +9,7 @@ def is_anagram(first_string, second_string):
             secondStringList.remove(letra)
             if len(secondStringList) == 0:
                 return True
-        else: False
+        else:
+            return False
 
-
-
-
-def sort_string(string):
-    if len(string) <= 1:
-        return False
+    return True
