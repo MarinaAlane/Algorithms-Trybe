@@ -15,7 +15,7 @@ def mySort(array):
 
 def is_anagram(first_string, second_string):
     if first_string or second_string == '':
-        return False
+        result = False
 
     first_list = mySort(list(first_string))
     second_list = mySort(list(second_string))
