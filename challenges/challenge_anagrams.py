@@ -1,7 +1,7 @@
 def build_counts(string):
     words = dict()
-    for l in string:
-        words[l] = words.setdefault(l, 0) + 1
+    for letters in string:
+        words[letters] = words.setdefault(letters, 0) + 1
 
     return words
 
