@@ -1,14 +1,16 @@
 def mySort(array):
-    list_Object = list(array)
+    myList = list(array)
 
-    for index in range(0, len(list_Object)):
+    for index in range(0, len(myList)):
         min_index = index
-        for index_right in range(index + 1, len(list_Object)):
-            if list_Object[index_right] < list_Object[min_index]:
-                min_index = index_right
-        list_Object[index], list_Object[min_index] = list_Object[min_index], list_Object[index]
 
-    return list_Object
+        for index_right in range(index + 1, len(myList)):
+            if myList[index_right] < myList[min_index]:
+                min_index = index_right
+
+        myList[index], myList[min_index] = myList[min_index], myList[index]
+
+    return myList
 
 
 def is_anagram(first_string, second_string):
