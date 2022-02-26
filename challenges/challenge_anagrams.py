@@ -12,8 +12,13 @@ def sort_list(lista):
         i += 1
     return lista
 
+
 def is_anagram(first_string, second_string):
-    if first_string == '' or second_string == '' or len(first_string) != len (second_string):
+    if (
+        first_string == ""
+        or second_string == ""
+        or len(first_string) != len(second_string)
+    ):
         return False
     if sort_list(list(first_string)) == sort_list(list(second_string)):
         return True
