@@ -1,2 +1,3 @@
 def is_anagram(first_string, second_string):
-    """ Faça o código aqui. """
+    if len(first_string) or len(second_string) == 0:
+        return False
