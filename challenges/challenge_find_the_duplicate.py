@@ -11,8 +11,3 @@ def find_duplicate(nums):
         if nums[i] in nums[i + 1 :]:
             return nums[i]
     return False
-
-
-nums = [1, 3, 4, 2, 2]
-
-print(find_duplicate(nums))
