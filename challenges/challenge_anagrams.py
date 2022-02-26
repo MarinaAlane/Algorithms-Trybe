@@ -14,37 +14,34 @@ def mySort(array):
 
 
 def is_anagram(first_string, second_string):
-    try:
-        if first_string == '' or second_string == '':
-            return False
-        else:
-            first_list = mySort(list(first_string))
-            second_list = mySort(list(second_string))
-
-            position = 0
-
-            while position < len(first_string) and True:
-                if first_list[position] == second_list[position]:
-                    position = position + 1
-                else:
-                    return False
-
-            return True
-    except:
+    if first_string == '' or second_string == '':
         return False
+    else:
+        first_list = mySort(list(first_string))
+        second_list = mySort(list(second_string))
+
+        position = 0
+
+        while position < len(first_string) and True:
+            if first_list[position] == second_list[position]:
+                position = position + 1
+            else:
+                return False
+
+        return True
 
 
 if __name__ == '__main__':
     first_string = "amor"
     second_string = "roma"
     # saída: True
-    # Explicação: Nesse caso o retorno da função é True, pois a palavra "roma" é um anagrama de "amor".
+    # Explicação: Nesse caso o retorno da função é True,
+    # pois a palavra "roma" é um anagrama de "amor".
     print(is_anagram(first_string, second_string))
 
     first_string = "pedra"
     second_string = "perda"
     # saída: True
-    # Explicação: Nesse caso o retorno também é True. Na palavra "pedra", trocamos o "d" de lugar com o "r" e formamos "perda", sendo assim um anagrama.  
     print(is_anagram(first_string, second_string))
 
     first_string = "pato"
