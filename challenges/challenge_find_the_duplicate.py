@@ -1,8 +1,4 @@
 def find_duplicate(nums):
-    if not nums:
-        return False
-    if len(nums) == 1:
-        return False
     for i in range(len(nums)):
         if type(nums[i]) is str:
             return False
