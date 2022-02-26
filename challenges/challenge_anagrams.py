@@ -20,8 +20,7 @@ def is_anagram(first_string, second_string):
         repeated_letters.append(low_letter)
         turn += 1
       all_letters.pop(current_index)
-    
-    print(letters)
-    print(repeated_letters)
+
     if letters == repeated_letters:
       return True
+      
