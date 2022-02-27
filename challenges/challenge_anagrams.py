@@ -3,4 +3,3 @@ def is_anagram(first_string, second_string):
         return False
     if len(first_string) is not len(second_string):
         return False
-    if len(first_string)
