@@ -4,11 +4,12 @@
 # posição informadas em cada tupla do permanence_period. Se estiver, conta
 # 1 e passa pra proxima tupla, se não,ele vai pro erro.
 
+# no primeiro commit deu complexidade de código, alterei, retirando as 
+# 3 primeiras linhas. O teste rodou sem elas.
+
 def study_schedule(permanence_period, target_time):
-    counter = 0
-    if not target_time:
-        return None
     try:
+        counter = 0
         for period in permanence_period:
             if period[0] <= target_time <= period[1]:
                 counter += 1
