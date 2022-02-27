@@ -1,2 +1,8 @@
 def is_palindrome_iterative(word):
-    """ Faça o código aqui. """
+    if word == "":
+        return False
+
+    return word == word[::-1]
+
+
+# https://www.w3schools.com/python/python_howto_reverse_string.asp
