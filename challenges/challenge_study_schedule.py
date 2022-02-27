@@ -8,5 +8,3 @@ def study_schedule(permanence_period, target_time):
         if (login <= target_time <= logout):
             counter += 1
     return counter
-
-# ISSO NÃO QUER PASSAR PORQUE
