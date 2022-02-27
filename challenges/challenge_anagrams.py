@@ -12,4 +12,3 @@ def get_char_count(string):
 
 def is_anagram(first_string, second_string):
     return get_char_count(first_string) == get_char_count(second_string)
-    
