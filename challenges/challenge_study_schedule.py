@@ -1,6 +1,13 @@
 def study_schedule(permanence_period, target_time):
     ocurrences = 0
+    
+    if target_time == None:
+        return None
+
     for per in permanence_period:
+        if type(per[0]) != int or type(per[1]) != int:
+            return None
+
         if target_time >= per[0] and target_time <= per[1]:
             ocurrences += 1
 
