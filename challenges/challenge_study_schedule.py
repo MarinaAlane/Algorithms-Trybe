@@ -8,3 +8,4 @@ def study_schedule(permanence_period, target_time):
 		return None
 	else:
 		return counter
+		
