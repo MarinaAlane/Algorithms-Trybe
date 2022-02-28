@@ -19,7 +19,6 @@ def is_palindrome_recursive(word, low_index, high_index):
 # com os indices atualizados para verificar as letras subsequentes(tanto
 # crescentemente, quanto decrescentemente)
 
-
 # Uma alternativa de resolução é:
 # for i in range(high_index // 2):
 #     if word[low_index] != word[high_index]:

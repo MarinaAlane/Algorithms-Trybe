@@ -28,4 +28,3 @@ def is_anagram(first_string, second_string):
     # second_string for igual a zero, significa que as duas strings são
     # anagramas. Se restar algo em second string, entao nao é anagrama.
     # https://www.programiz.com/python-programming/methods/string/replace
-    
