@@ -7,8 +7,6 @@ def mergesort(lista, inicio=0, fim=None):
         mergesort(lista, meio, fim)
         merge(lista, inicio, meio, fim)
 
-    return lista
-
 def merge(lista, inicio, meio, fim):
     left = lista[inicio:meio]
     right = lista[meio:fim]
@@ -26,17 +24,3 @@ def merge(lista, inicio, meio, fim):
         else:
             lista[k] = right[top_right]
             top_right = top_right + 1
-
-def is_anagram(first_string, second_string):
-    """ Faça o código aqui. """
-    first_string_chars = [char for char in first_string]
-    second_string_chars = [char for char in second_string]
-
-    if mergesort(first_string_chars) == mergesort(second_string_chars):
-        return True
-    else:
-        return False
-
-# https://www.devmedia.com.br/algoritmos-de-ordenacao-analise-e-comparacao/28261
-
-# https://www.youtube.com/watch?v=5prE6Mz8Vh0
