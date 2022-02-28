@@ -1,2 +1,14 @@
 def study_schedule(permanence_period, target_time):
-    """ Faça o código aqui. """
+    if not target_time:
+        return None
+    count = 0
+    for time in permanence_period:
+        if time[0] <= target_time and time[1] >= target_time:
+            count += 1
+    return count
+
+
+if __name__ == '__main__':
+    permanence_period_data = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
+    result = study_schedule(permanence_period_data, 5)
+    print(result)
