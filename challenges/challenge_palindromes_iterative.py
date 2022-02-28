@@ -26,6 +26,6 @@ def is_palindrome_iterative(word, result='', originalWord=''):
 
 
 if __name__ == '__main__':
-    permanence_period_data = 'REVIVER'
-    result = is_palindrome_iterative(permanence_period_data)
+    word = 'REVIVER'
+    result = is_palindrome_iterative(word)
     print(result)
