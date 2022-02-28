@@ -1,5 +1,6 @@
 def quicksort(string):
-    if not string: return string
+    if not string:
+        return string
 
     pivot = string[0]
 
@@ -8,7 +9,6 @@ def quicksort(string):
 
     return head + [x for x in string if x == pivot] + tail
 
-# E K S A
 
 def is_anagram(first_string, second_string):
     return quicksort(first_string) == quicksort(second_string)
