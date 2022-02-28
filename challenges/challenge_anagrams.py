@@ -3,9 +3,13 @@ def is_anagram(first_string, second_string):
         return False
     if len(first_string) != len(second_string):
         return False
+
+    array = [letter for letter in first_string]
+
     for letter in second_string:
-        if letter not in first_string:
+        if letter not in array:
             return False
+        array.remove(letter)
 
     return True
 
