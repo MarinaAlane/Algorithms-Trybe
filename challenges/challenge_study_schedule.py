@@ -1,6 +1,6 @@
-def study_schedule(permanence_period, target_time):
+def study_schedule(permanence_period, target_time):  
+    c = 0
     for e, s in permanence_period:
-        c = 0
         try:
             if e <= target_time <= s:
                 c += 1
