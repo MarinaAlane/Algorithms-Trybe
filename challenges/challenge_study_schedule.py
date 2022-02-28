@@ -1,7 +1,4 @@
 def study_schedule(permanence_period, target_time):
-    if not target_time:
-        return None
-
     try:
         students_counter = 0
         for student_period in permanence_period:
@@ -11,9 +8,9 @@ def study_schedule(permanence_period, target_time):
     except TypeError:
         return None
 
-# a funcção study_schedule recebe como parametro a lista de tuplas de horários
+# a função study_schedule recebe como parametro a lista de tuplas de horários
 # de entrada e saida de cada estudadnte no site de ensino.
-# o suegundo parametro é o target_time que é o horário desejado, ou seja, o
+# o segundo parametro é o target_time que é o horário desejado, ou seja, o
 # próprio usuário envia o horário ao qual ele quer saber o numero de usuarios
 # naquela determinada hora. Primeiro questiono se o target time está vazio ou
 # não e se estiver vazio retorna None. Faço um try/except e inicio um contador
@@ -23,4 +20,6 @@ def study_schedule(permanence_period, target_time):
 # a os itens da tupla posso fazer o acesso como se fosse uma lista e usar []
 # no elemento desejado. Se o target_time estiver dentro do range da tupla,
 # entao acrescenta um digito ao contador de estudantes. Se algo der errado
-# retorno None.
+# retorno None
+# tive que tirar a parte de verificar se o parametro foi passado ou não para
+# tirar a complexidade da função.
