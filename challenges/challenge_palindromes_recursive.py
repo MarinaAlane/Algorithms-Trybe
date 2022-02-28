@@ -7,8 +7,8 @@
 
 
 # def is_palindrome_recursive(word, low_index, high_index):
-# Mudei os parametros porque eu fiz a recursiva na iterativa e lá não mostrava 
-#   todos os parametros
+# Mudei os parametros porque eu fiz a recursiva na iterativa e lá não
+# mostrava todos os parametros
 # Por isso criei os paremetros láa e quando vi estavam diferentes kkk
 # Mas não passa no avaliador kkk
 # def is_palindrome_recursive(word, result='', originalWord=''):
