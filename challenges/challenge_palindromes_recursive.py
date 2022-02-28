@@ -13,6 +13,3 @@ def is_palindrome_recursive(word, low_index, high_index):
 
     return isValid
 
-
-# teste = is_palindrome_recursive("I", 0, len("I") - 1)
-# print(teste)
