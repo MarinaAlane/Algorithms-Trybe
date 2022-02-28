@@ -4,7 +4,10 @@ def insertion_sort(word):
     for i in range(len(word_list)):
         current_value = word_list[i]
         current_position = i
-        while (current_position > 0 and word_list[current_position - 1] > current_value):
+        while (
+            current_position > 0 and word_list[current_position -
+                                               1] > current_value
+        ):
             word_list[current_position] = word_list[current_position - 1]
             current_position = current_position - 1
         word_list[current_position] = current_value
