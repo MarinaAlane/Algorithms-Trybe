@@ -8,6 +8,6 @@ def study_schedule(permanence_period, target_time):
                 p2) != int or p2 is None
         ):
             return None
-        if target_time >= p1 and target_time <= p2:
+        if p1 <= target_time <= p2:
             contador += 1
     return contador
