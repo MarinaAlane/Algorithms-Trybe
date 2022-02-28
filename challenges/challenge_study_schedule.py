@@ -1,4 +1,4 @@
-def study_schedule(permanence_period, target_time):  
+def study_schedule(permanence_period, target_time):
     c = 0
     for e, s in permanence_period:
         try:
