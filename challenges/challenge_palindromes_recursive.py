@@ -1,4 +1,5 @@
-# Requisito resolvido com base neste site: https://www.geeksforgeeks.org/recursive-function-check-string-palindrome/
+# Requisito resolvido com base neste site:
+# https://www.geeksforgeeks.org/recursive-function-check-string-palindrome/
 def is_palindrome_recursive(word, low_index, high_index):
     if word == "":
         return False
