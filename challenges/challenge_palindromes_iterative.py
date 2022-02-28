@@ -1,31 +1,13 @@
-# jeito fácil
-# def is_palindrome_iterative(word):
-#     if word == word[::-1]:
-#         return word[::-1]
-#     else:
-#         return 'false'
-
-
-def is_palindrome_iterative(word, result='', originalWord=''):
+def is_palindrome_iterative(word):
     if not word:
         return False
-
-    if len(originalWord) < len(word):
-        originalWord = word
-
-    if(len(word) > 1):
-        return is_palindrome_iterative(
-            word[0:len(word) - 1],
-            result + word[-1],
-            originalWord
-            )
-
-    if result + word == originalWord:
-        return True
-    return False
+    for index, letter in enumerate(word):
+        if word[-index - 1] != letter:
+            return False
+    return True
 
 
 if __name__ == '__main__':
-    word = 'REVIVER'
+    word = 'ama'
     result = is_palindrome_iterative(word)
     print(result)
