@@ -1,3 +1,6 @@
+# verificar se é um anagrama
+# first_string  @{String} - palavra principal
+# second_string @{String} - palavra a ser comparada
 def is_anagram(first_string, second_string):
     if len(first_string) != len(second_string):
         return False
