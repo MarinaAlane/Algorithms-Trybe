@@ -1,6 +1,7 @@
 # função para descobrir qual o melhor horário para disponibilizar os conteúdos
 # o que retornar o maior contador será o horário selecionado
-# permanence_period @{Array}  - horário de entrada e saída de cada aluno (lista de tuplas)
+# permanence_period @{Array}  - horário de entrada e saída de cada aluno
+# (lista de tuplas)
 # target_time       @{Number} - horário alvo
 def study_schedule(permanence_period, target_time):
     try:
