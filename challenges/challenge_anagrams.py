@@ -16,17 +16,15 @@ def is_anagram(first_string, second_string):
     string1 = count_letter_string(first_string)
     string2 = count_letter_string(second_string)
 
-
     if not string1 and string2 or string1 != string2:
         return False
     else:
         # verifica se cada index em string1 tem um correspondente
         # em string2 e vice e versa
         for index in string1:
-            if not index in string2:
+            if index not in string2:
                 return False
             if not string1[index] == string2[index]:
                 return False
 
         return True
-    
