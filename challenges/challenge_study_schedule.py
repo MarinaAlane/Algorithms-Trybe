@@ -1,3 +1,6 @@
+# referencias
+# https://github.com/tryber/sd-011-project-algorithms/pull/98
+
 def study_schedule(permanence_period, target_time):
     students = 0
     for period in permanence_period:
