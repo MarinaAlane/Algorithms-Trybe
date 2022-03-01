@@ -1,8 +1,6 @@
 def study_schedule(permanence_period, target_time):
     result = 0
-    if not permanence_period:
-        return None
-    if not target_time:
+    if not permanence_period or not target_time:
         return None
     for item in permanence_period:
         (entry_time, exit_time) = item
