@@ -1,3 +1,16 @@
-def study_schedule(permanence_period, target_time):
-    """ Faça o código aqui. """
-    #Começando
+def study_schedule(permanence_period, target_time = None):
+    time = 0
+    for num, value in permanence_period:
+
+        if target_time is None or type(num) != int or type(value) != int:
+                return None
+
+        if num <= target_time <= value:
+            time += 1
+
+    return time
+
+
+permanence_periods = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
+
+print(study_schedule(permanence_periods, 5))
