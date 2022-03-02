@@ -6,5 +6,5 @@ def study_schedule(permanence_period, target_time):
             if entry_time <= target_time <= exit_time:
                 students_per_period += 1
         return students_per_period
-    except ValueError:
+    except TypeError:
         return None
