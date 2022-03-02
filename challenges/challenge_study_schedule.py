@@ -1,9 +1,9 @@
-def study_schedule(permanence_period, target_time = None):
+def study_schedule(permanence_period, target_time):
     time = 0
     for num, value in permanence_period:
 
         if target_time is None or type(num) != int or type(value) != int:
-                return None
+            return None
 
         if num <= target_time <= value:
             time += 1
