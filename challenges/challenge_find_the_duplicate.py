@@ -19,20 +19,18 @@ def bubble_sort(array):
     # a iteração sobre índices já ordenados
     num_of_iterations = 0
 
-    try:
-        # Enquanto ainda não está ordenado (ocorreram trocas na iteração)
-        while has_swapped:
-            has_swapped = False
-            # percorra o array até o ultimo índice não ordenado
-            for i in range(len(array) - num_of_iterations - 1):
-                # caso a posição corrente seja maior que a posterior
-                if array[i] > array[i + 1]:
-                    # realiza a troca entre as posições
-                    array[i], array[i + 1] = array[i + 1], array[i]
-                    # marca que tivemos trocas nesta iteração
-                    has_swapped = True
-            num_of_iterations += 1
-            return array
-
-    except TypeError:
-        return []
+    # Enquanto ainda não está ordenado (ocorreram trocas na iteração)
+    while has_swapped:
+        has_swapped = False
+        # percorra o array até o ultimo índice não ordenado
+        for i in range(len(array) - num_of_iterations - 1):
+            if array[i] is not int:
+                return False
+            # caso a posição corrente seja maior que a posterior
+            if array[i] > array[i + 1]:
+                # realiza a troca entre as posições
+                array[i], array[i + 1] = array[i + 1], array[i]
+                # marca que tivemos trocas nesta iteração
+                has_swapped = True
+        num_of_iterations += 1
+        return array
