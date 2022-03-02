@@ -9,6 +9,7 @@ def is_anagram(first_string, second_string):
 def bubble_sort(string):
     str_list = list(string)
     has_swapped = True
+    print(str_list)
 
     num_of_iterations = 0
 
@@ -19,4 +20,4 @@ def bubble_sort(string):
                 str_list[i], str_list[i + 1] = str_list[i + 1], str_list[i]
                 has_swapped = True
         num_of_iterations += 1
-        return "".join(str_list)
+    return "".join(str_list)
