@@ -3,6 +3,8 @@ def study_schedule(permanence_period, target_time):
         return None
     students_per_period = 0
     for period in permanence_period:
+        if period[0] > period[1]:
+            return None
         if target_time >= period[0] and target_time <= period[1]:
             students_per_period += 1
     return students_per_period
