@@ -5,7 +5,7 @@ def find_duplicate(nums):
 
     for index in range(len(ordered_nums) - 1):
         if ordered_nums[index] == ordered_nums[index + 1]:
-            return True
+            return ordered_nums[index]
     return False
 
 
@@ -25,7 +25,7 @@ def bubble_sort(array):
         # percorra o array até o ultimo índice não ordenado
         for i in range(len(array) - num_of_iterations - 1):
             if array[i] is not int:
-                return False
+                return []
             # caso a posição corrente seja maior que a posterior
             if array[i] > array[i + 1]:
                 # realiza a troca entre as posições
