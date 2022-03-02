@@ -24,7 +24,7 @@ def bubble_sort(array):
         has_swapped = False
         # percorra o array até o ultimo índice não ordenado
         for i in range(len(array) - num_of_iterations - 1):
-            if array[i] is not int:
+            if type(array[i]) is not int:
                 return []
             # caso a posição corrente seja maior que a posterior
             if array[i] > array[i + 1]:
