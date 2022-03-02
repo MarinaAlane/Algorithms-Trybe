@@ -1,2 +1,38 @@
 def find_duplicate(nums):
-    """ Faça o código aqui. """
+    ordered_nums = bubble_sort(nums)
+    if len(ordered_nums) < 2:
+        return False
+
+    for index, num in enumerate(ordered_nums):
+        if num == ordered_nums[index + 1]:
+            return True
+    return False
+
+
+def bubble_sort(array):
+    # variável utilizado na iteração
+    # para marcar se houve ou não trocas naquela iteração
+    # Quando falsa, indica que o array está ordenado
+    has_swapped = True
+
+    # armazena o número de iterações para evitar
+    # a iteração sobre índices já ordenados
+    num_of_iterations = 0
+
+    # Enquanto ainda não está ordenado (ocorreram trocas na iteração)
+    while has_swapped:
+        has_swapped = False
+
+        # percorra o array até o ultimo índice não ordenado
+        for i in range(len(array) - num_of_iterations - 1):
+            if type(array[i]) is not int or array[i] < 1:
+                return []
+            # caso a posição corrente seja maior que a posterior
+            if array[i] > array[i + 1]:
+                # realiza a troca entre as posições
+                array[i], array[i + 1] = array[i + 1], array[i]
+                # marca que tivemos trocas nesta iteração
+                has_swapped = True
+        num_of_iterations += 1
+
+    return array
