@@ -6,6 +6,6 @@ def study_schedule(permanence_period, target_time):
         # https://www.guru99.com/type-isinstance-python.html#7
         if not isinstance(num, int) or not isinstance(value, int):
             return None
-        if (num <= target_time <= value):
+        if num <= target_time <= value:
             time += 1
     return time
