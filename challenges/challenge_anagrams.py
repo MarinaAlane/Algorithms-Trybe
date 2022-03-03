@@ -6,8 +6,8 @@ def is_anagram(first_string, second_string):
     return bubble_sort(first_string) == bubble_sort(second_string)
 
 
-def bubble_sort(string):
-    str_list = list(string)
+def bubble_sort(strings):
+    str_list = list(strings)
     has_swapped = True
     print(str_list)
 
