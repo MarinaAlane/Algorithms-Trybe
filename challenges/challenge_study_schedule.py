@@ -1,6 +1,3 @@
-permanence_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
-target_time = 2
-
 def study_schedule(permanence_period, target_time):
     if not target_time:
         return None
@@ -13,6 +10,3 @@ def study_schedule(permanence_period, target_time):
         if (start_hour <= target_time <= end_hour):
             counter += 1
     return counter
-
-result = study_schedule(permanence_period, target_time)
-print(result)
