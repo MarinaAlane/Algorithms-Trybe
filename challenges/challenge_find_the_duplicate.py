@@ -1,8 +1,9 @@
 def find_duplicate(nums):
-    if not (nums):
+    if not nums or type(nums) is str:
         return False
-    if (len(nums) < 2):
-        return False
-    for number in nums:
-        if (type(number) == str or number < 0):
+    for i, number in enumerate(nums):
+        if type(number) is str or number < 0:
             return False
+        if number in nums[i + 1:]:
+            return number
+    return False

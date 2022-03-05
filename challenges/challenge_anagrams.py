@@ -3,7 +3,6 @@ def is_anagram(first_string, second_string):
         return False
     
     found=0
-    notFound=0
 
     for i in range(len(first_string)):
         found = 0
@@ -12,9 +11,6 @@ def is_anagram(first_string, second_string):
                 found = 1
                 break
         if found==0:
-            notFound = 1
-            break
-    if notFound==1:
-        return False
+            return False
     else:
         return True
