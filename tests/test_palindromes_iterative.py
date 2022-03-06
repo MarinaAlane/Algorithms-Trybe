@@ -40,7 +40,6 @@ def test_validar_tempo_iterative():
             number=10000,
         )
     correct_time = time <= 0.005
-    print(f"O meu tempo foi de: {time}")
     assert (
         algorithms_correct and correct_time
     ), f"Falhou, o tempo foi: {time}, algoritmo correto? {algorithms_correct}"
