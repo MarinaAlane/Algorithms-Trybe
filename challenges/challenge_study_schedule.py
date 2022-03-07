@@ -1,6 +1,6 @@
 def study_schedule(permanence_period, target_time):
     amount = 0
-    
+
     if not target_time:
         return None
     for start_time, final_time in permanence_period:
