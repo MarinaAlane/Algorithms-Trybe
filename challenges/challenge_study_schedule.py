@@ -1,5 +1,5 @@
 def study_schedule(permanence_period, target_time):
-# https://www.guru99.com/type-isinstance-python.html
+    # https://www.guru99.com/type-isinstance-python.html
     result = 0
 
     if not target_time:
