@@ -1,5 +1,4 @@
 def study_schedule(permanence_period, target_time):
-    """Faça o código aqui."""
     try:
         compatible_hours = 0
         for entry_time, departure_time in permanence_period:
