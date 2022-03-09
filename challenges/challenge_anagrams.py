@@ -17,7 +17,7 @@ def ordening(word):
                 first_letter = letter
         ordened_list.append(first_letter)
         word_listed.remove(first_letter)
-    
+
     return ''.join(ordened_list)
 
 

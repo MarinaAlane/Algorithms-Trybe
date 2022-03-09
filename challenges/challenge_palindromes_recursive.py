@@ -9,4 +9,3 @@ def is_palindrome_recursive(word, low_index, high_index):
     previous_last_char = high_index - 1
 
     return is_palindrome_recursive(word, next_initial_char, previous_last_char)
-
