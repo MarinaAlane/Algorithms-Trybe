@@ -3,6 +3,8 @@ SOURCE:
 https://stackoverflow.com/questions/11964450
 /python-order-a-list-of-numbers-without-built-in-sort-min-max-function
 """
+
+
 def ordening(word):
     word_listed = list(word)
     ordened_list = []
