@@ -1,2 +1,12 @@
 def study_schedule(permanence_period, target_time):
-    """ Faça o código aqui. """
+    index = 0
+    if type(target_time) is not int:
+        return None
+
+    for e in permanence_period:
+        try:
+            if e[0] <= target_time <= e[1]:
+                index += 1
+        except TypeError:
+            return None
+    return index
