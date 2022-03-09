@@ -1,11 +1,11 @@
 def find_duplicate(nums):
     result = [0, 0]
     for number in nums:
-        if  type(number) == str or number < 0:
+        if type(number) == str or number < 0:
             return False
         if nums.count(number) > result[1]:
-         result[0] = number
-         result[1] = nums.count(number)
+            result[0] = number
+            result[1] = nums.count(number)
     if result[1] == 1:
         return False
     return result[0]
