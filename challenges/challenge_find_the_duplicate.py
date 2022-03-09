@@ -9,8 +9,3 @@ def find_duplicate(nums):
     if result[1] == 1:
         return False
     return result[0]
-
-# array = [ 1, 2 ,1]
-# print(array.count(2))
-numero = "ae"
-print(type(numero) is str)
