@@ -3,9 +3,9 @@ def find_duplicate(nums):
     for num in nums:
         if type(num) is str:
             return False
-        if num < 0:
+        elif num < 0:
             return False
-        if num in nums_set:
+        elif num in nums_set:
             nums_set.remove(num)
         else:
             return num
