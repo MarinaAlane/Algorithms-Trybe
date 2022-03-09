@@ -1,4 +1,8 @@
-# SOURCE: https://stackoverflow.com/questions/11964450/python-order-a-list-of-numbers-without-built-in-sort-min-max-function
+"""
+SOURCE: 
+https://stackoverflow.com/questions/11964450
+/python-order-a-list-of-numbers-without-built-in-sort-min-max-function
+"""
 def ordening(word):
     word_listed = list(word)
     ordened_list = []
@@ -17,10 +21,10 @@ def ordening(word):
 
 def is_anagram(first_string, second_string):
     if not first_string and not second_string:
-      return False
+        return False
 
     if len(first_string) != len(second_string):
-      return False
+        return False
 
     fs_ordened = ordening(first_string)
     ss_ordened = ordening(second_string)
@@ -31,5 +35,3 @@ def is_anagram(first_string, second_string):
         return False
 
     return True
-
-print(is_anagram)
