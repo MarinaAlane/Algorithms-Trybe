@@ -1,2 +1,17 @@
 def is_palindrome_iterative(word):
-    """ Faça o código aqui. """
+    if not word:
+        return False
+	
+    repetition = 0
+
+    while repetition < len(word) // 2:
+        index = 0
+        reversed_index = -1 * (index + 1)
+
+        if word[index] != word[reversed_index]:
+            return False
+
+        repetition += 1
+        index += 1
+
+    return True
