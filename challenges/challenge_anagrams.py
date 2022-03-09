@@ -30,6 +30,3 @@ def is_anagram(first_string, second_string):
     first_sorted_string = merge_sort_string(first_string)
     second_sorted_string = merge_sort_string(second_string)
     return first_sorted_string == second_sorted_string
-
-
-is_anagram("a b b 2 3 3", "b a b 2 3 3")
