@@ -10,5 +10,5 @@ def find_duplicate(nums):
     for i, n in enumerate(nums):
         if type(n) == str or n < 0 or i == len(nums) - 1:
             return False
-        if i < len(nums) - 1 and n == nums[i + 1]:
+        if n == nums[i + 1]:
             return n
