@@ -1,5 +1,6 @@
 from challenges import sorting_algs
 
+
 def is_anagram(first_string, second_string):
     if "" in [first_string, second_string] or len(first_string) != len(
         second_string
