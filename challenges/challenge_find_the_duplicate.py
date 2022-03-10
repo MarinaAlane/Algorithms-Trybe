@@ -1,9 +1,10 @@
 from challenges import sorting_algs
 
+
 def find_duplicate(nums):
     if not len(nums) or len(nums) == 1:
         return False
-    
+
     sorting_algs.quicksort(nums, 0, len(nums) - 1)
 
     for i, n in enumerate(nums):
@@ -11,4 +12,3 @@ def find_duplicate(nums):
             return False
         if i < len(nums) - 1 and n == nums[i + 1]:
             return n
-
