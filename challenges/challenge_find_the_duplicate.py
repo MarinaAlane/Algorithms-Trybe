@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def array_to_dict(array):
     my_dict = defaultdict(lambda: 0)
     for num in array:
@@ -9,15 +10,13 @@ def array_to_dict(array):
 
 
 def find_duplicate(nums):
-    if len(nums) == 0 :
+    if len(nums) == 0:
         return False
 
     for number in nums:
-        if type(number) is str:
+        if type(number) is str or number < 0:
             return False
-        if number < 0:
-            return False
-    
+
     dict = array_to_dict(nums)
     if max(dict.values()) < 2:
         return False
