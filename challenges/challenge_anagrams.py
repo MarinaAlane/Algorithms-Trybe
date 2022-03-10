@@ -1,2 +1,2 @@
 def is_anagram(first_string, second_string):
-    """ Faça o código aqui. Iniciando """
+    """ Faça o código aqui. Iniciando novamente """
