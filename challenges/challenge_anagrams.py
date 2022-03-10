@@ -1,5 +1,7 @@
 def is_anagram(first_string, second_string):
-    if '' in [first_string, second_string] or len(first_string) != len(second_string):
+    if "" in [first_string, second_string] or len(first_string) != len(
+        second_string
+    ):
         return False
 
     first_string = list(first_string)
@@ -10,6 +12,7 @@ def is_anagram(first_string, second_string):
 
     return first_string == second_string
 
+
 def quicksort(array, low, high):
     if len(array) == 1:
         return array
@@ -19,6 +22,7 @@ def quicksort(array, low, high):
 
         quicksort(array, low, partition_index - 1)
         quicksort(array, partition_index + 1, high)
+
 
 def partition(array, low, high):
     i = low - 1
