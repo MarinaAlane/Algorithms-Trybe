@@ -4,18 +4,11 @@ def study_schedule(permanence_period, target_time):
 
     count = 0
 
-    for index in permanence_period:
-        if type(index[0]) != int or type(index[1]) != int:
+    for key, value in permanence_period:
+        if type(key) != int or type(value) != int:
             return None
 
-        if index[0] <= target_time <= index[1]:
+        if key <= target_time <= value:
             count = count + 1
 
     return count
-
-
-permanence_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
-
-target_time = 1
-
-study_schedule(permanence_period, target_time)
