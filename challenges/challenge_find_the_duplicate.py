@@ -1,2 +1,7 @@
 def find_duplicate(nums):
-    """ Faça o código aqui. """
+    set_nums = set()
+    for n in nums:
+        if n in set_nums and n > 0:
+            return n
+        set_nums.add(n)
+    return False
