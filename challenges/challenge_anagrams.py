@@ -7,12 +7,13 @@ def is_anagram(first_string, second_string):
 
 
 def custom_sort(string):
-    new_string = ""
-    min = string[0]
-    while(len(string) > 0):
+    new_string = list()
+    string = list(string)
+    while(string):
+        min = string[0]
         for char in string:
-            if(char < min):
+            if(char <= min):
                 min = char
-        string.replace(min, None, 1)
-        new_string += min
+        string.remove(min)
+        new_string.append(min)
     return new_string
