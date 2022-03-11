@@ -1,6 +1,3 @@
-from tokenize import Number
-
-
 def find_duplicate(nums):
     list = []
     for n in nums:
