@@ -9,4 +9,3 @@ def study_schedule(permanence_period, target_time):
         return frequency
     except TypeError:
         return None
-
