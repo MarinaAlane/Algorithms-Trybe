@@ -6,7 +6,7 @@ def find_duplicate(nums):
         else:
             list[num] = 1
         if list[num] > 1:
-            if num < 0 :
+            if num < 0:
                 return False
             return num
     return False
