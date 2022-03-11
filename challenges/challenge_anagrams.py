@@ -1,8 +1,7 @@
 def is_anagram(first_string, second_string):
-    if not first_string or not second_string:
-        return False
+    same_len = len(first_string) == len(second_string)
 
-    if len(first_string) != len(second_string):
+    if not first_string or not second_string or not same_len:
         return False
 
     first_array = list(first_string)
