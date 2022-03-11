@@ -1,23 +1,26 @@
-def sort(word):
+def toSort(list):
+    base_list = len(list) + 1
+    sorted_list = []
+    counter = 1
+    while counter < base_list:
+        minimum = min(list)
+        id = list.index(minimum)
+        del(list[id])
+        sorted_list.append(minimum)
+        counter += 1
 
-    listWord = list(word)
-
-    for i in range(len(listWord)):
-        minimum = i
-        for j in range(i + 1, len(listWord)):
-            if(listWord[j] < listWord[minimum]):
-                minimum = j
-
-        listWord[minimum], listWord[i] = listWord[i], listWord[minimum]
-
-    return "".join(listWord)
+    return sorted_list
 
 
 def is_anagram(first_string, second_string):
-
-    if len(first_string) != len(second_string):
+    if (
+        first_string == ""
+        or second_string == ""
+    ):
         return False
-
-    first = sort(first_string)
-    second = sort(second_string)
-    return first == second
+    a = toSort(list(first_string))
+    b = toSort(list(second_string))
+    if a == b:
+        return True
+    else:
+        return False
