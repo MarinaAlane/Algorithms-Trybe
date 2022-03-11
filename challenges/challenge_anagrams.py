@@ -1,13 +1,10 @@
 def is_anagram(first_string, second_string):
     if len(first_string) != len(second_string):
         return False
-    first_phrase = invert_word(first_string)
-    second_phrase = invert_word(second_string)
-    for i in range(len(first_phrase)):
-        if first_phrase[i] == second_phrase[i]:
-            return True
-        else:
-            return False
+    obj_1 = working_obj(first_string)
+    obj_2 = working_obj(second_string)
+    array_keys = list(obj_1.keys())
+    return invert_word(array_keys, obj_1, obj_2)
 
 
 # codigo extraido dos exercicios do course
@@ -15,14 +12,25 @@ def is_anagram(first_string, second_string):
 # conseguindo criar nossa proprio sort
 
 
-def invert_word(phrase):
-    word_array = []
-    for letter in phrase:
-        word_array.append(letter)
-    for i in range(len(word_array)):
-        minimum = i
-        for j in range(i + 1, len(word_array)):
-            if word_array[j] < word_array[minimum]:
-                minimum = j
-    word_array[minimum], word_array[i] = word_array[i], word_array[minimum]
-    return word_array
+def invert_word(phrase, obj_1, obj_2):
+    for i in phrase:
+        try:
+            if obj_1[i] != obj_2[i]:
+                return False
+        except KeyError:
+            return False
+    return True
+
+
+def working_obj(word):
+    obj = {}
+    reference = 0
+    for letter in word:
+        obj[letter] = 0
+    array_keys = list(obj.keys())
+    while reference < len(array_keys):
+        for i in range(len(word)):
+            if array_keys[reference] == word[i]:
+                obj[word[i]] = obj[word[i]] + 1
+        reference = reference + 1
+    return obj
